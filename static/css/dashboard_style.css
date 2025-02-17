@@ -1,0 +1,226 @@
+/* Reset default margins and paddings */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #e6e5e5;
+    height: 600px;
+}
+
+
+/* Custom Bar */
+#custom_service{
+    background-color: #ffffff;
+    height: 40px;
+}
+
+/* Dropdown and Form Styling */
+form {
+    margin-left: 90px;
+    padding-top: 10px;
+}
+
+.entry {
+    font-size: 12px;
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+#dropdownlist {
+    width: 400px;
+}
+
+.choice {
+    width: 100%;
+}
+
+/* Logo and Map Styling */
+#logo-img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+#main-div {
+    margin: 0 auto;
+}
+
+/* Navigation Strip */
+#navigation-strip {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;
+    background-color: rgba(255, 255, 255, 0.96); /* Semi-transparent background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 2; /* Higher than the map */
+    height: 100vh;
+    border: 0.3px solid rgb(160, 160, 160);
+}
+
+#navigation-strip .icon {
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+#navigation-strip .icon img {
+    width: 25px;
+}
+
+
+/* Card Grid  */
+
+/* Dashboard Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: 29% 20% 20% 29%;
+    grid-template-rows: auto 280px auto;
+    gap: 10px;
+    margin-left: 70px;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+
+.card_title{
+    display: inline;
+    margin-top: 0px;
+}
+
+.card_img {
+    height: 25px;
+    padding-right: 5px;
+}
+
+
+.card, .vertical-card {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.vertical-card {
+    grid-column: 2 / span 2; 
+}
+
+.card .value {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Cards under the first and last top cards */
+.card:nth-of-type(5),
+.card:nth-of-type(6) {
+    grid-column: 1;
+}
+
+.card:nth-of-type(8),
+.card:nth-of-type(9) {
+    grid-column: 4;
+}
+
+.card:nth-of-type(5),
+.card:nth-of-type(8) {
+    grid-row: 2/3;
+}
+
+#radarChart {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.value {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 1200;
+    color: #547dca;
+    margin-top: 5px;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.vertical-card {
+    display: flex; 
+    height: auto; 
+    grid-row: 2/span 2;
+}
+
+
+/* light text */
+.l_text{
+    color: #547dca;
+    font-weight: lighter;
+    margin-top: 20px;
+}
+
+
+/* Diversity Index Box Styling */
+#diversity-index-box {
+    background-color: #5D78EF; /* Blue background */
+    color: white;               /* White text for contrast */
+    padding: 10px;              /* Inner spacing */
+    border-radius: 4px;         /* Rounded corners */
+    display: flex;      /* Adjusts width based on content */
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;           /* Larger font size for emphasis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+    margin: 0 auto;
+}
+
+
+#compliance-score-box {
+    background-color: #5D78EF; /* Blue background */
+    color: white;               /* White text for contrast */
+    padding: 10px;              /* Inner spacing */
+    border-radius: 4px;         /* Rounded corners */
+    display: flex;      /* Adjusts width based on content */
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;           /* Larger font size for emphasis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+    margin: 0 auto;
+}
+
+#bike-lanes-box {
+    background-color: #5D78EF; /* Blue background */
+    color: white;               /* White text for contrast */
+    padding: 10px;              /* Inner spacing */
+    border-radius: 4px;         /* Rounded corners */
+    display: flex;      /* Adjusts width based on content */
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;           /* Larger font size for emphasis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+    margin: 0 auto;
+}
+
+#bikeability-index-box {
+    background-color: #5D78EF; /* Blue background */
+    color: white;               /* White text for contrast */
+    padding: 10px;              /* Inner spacing */
+    border-radius: 4px;         /* Rounded corners */
+    display: flex;      /* Adjusts width based on content */
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;           /* Larger font size for emphasis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+    margin: 0 auto;
+}
