@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Tool with Map Interface</title>
+    <!-- the Leaflet CSS for map styling -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="static/css/dashboard_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Google Fonts for a nicer font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- a user-friendly font like 'Open Sans' -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Polyline Gradient plugin -->
+    <script src="https://unpkg.com/leaflet.polyline.gradient/Leaflet.Polyline.Gradient.js"></script>
+</head>
+
+<body>
+
+    <!-- Left pane -->
+
+    <!-- Navigation Strip -->
+    <div id="navigation-strip">
+        <div class="icon" id="menu-bar" title="Current Interface">
+            <img src="static/images/bar.png" alt="Bar Icon" id="icon-bar">
+        </div>
+        <div class="icon" id="icon-map" title="Map Interface">
+            <img src="static/images/location.png" alt="Map Icon">
+        </div>
+        <div class="icon" id="icon-other" title="Other Interface">
+            <img src="static/images/monitor.png" alt="Other Icon">
+        </div>
+    </div>
+
+    <!-- Dashboard Layout -->
+    <div id="dashboard-layout">
+
+        <!-- Four Cards Section -->
+        <div class="grid-container">
+            <!-- Top Cards -->
+            <div class="card">
+                <img class="card_img" src="static/images/15.png" alt="15-minute Compliance">
+                <span> X-minute City Compliance Score </span>
+                <p>(aggregated 100*100m)</p>
+                <br>
+                <div id="compliance-score-box">
+                    <span id="compliance-score">Loading...</span>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card_img" src="static/images/route.png" alt="Amenities">
+                <span> Amenities Diversity Index </span>
+                <p>(aggregated 100*100m)</p>
+                <br>
+                <div id="diversity-index-box">
+                    <span id="diversity-index-value">Loading...</span>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card_img" src="static/images/lanes.png" alt="Bike Lanes">
+                <span> Sufficiency Index </span>
+                <p>(aggregated 100*100m)</p>
+                <br>
+                <div id="bike-lanes-box">
+                    <span id="bike-lanes">Loading...</span>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card_img" src="static/images/cyclist.png" alt="Bikeability Index">
+                <span> Bikeability Index </span>
+                <p>(15-minute Isochrone)</p>
+                <br>
+                <div id="bikeability-index-box">
+                    <span id="bikeability-index">Loading...</span>
+                </div>
+            </div>
+
+            <!-- Cards Under First Top Card -->
+            <div class="card" id="dis_card">
+                <h3>Description</h3>
+                <hr>
+                <p class="l_text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque porro totam culpa
+                    eveniet pariatur
+                    accusamus nulla facere expedita optio ea, soluta, amet enim ad. Sequi porro mollitia consequuntur
+                    libero recusandae?</p>
+            </div>
+            <div class="card" id="radar_card">
+                <h3>Accessibility in minutes</h3>
+                <hr>
+                <div class="card">
+                    <canvas id="radarChart" width="400" height="300"></canvas>
+                </div>
+            </div>
+
+            <!-- Vertical Card Under Second and Third Top Cards -->
+            <div class="vertical-card">
+                <!-- Map Container -->
+                <div id="map"></div>
+            </div>
+
+            <!-- Cards Under Last Top Card -->
+            <div class="card">
+                <h3>Accessibility in Distance</h3>
+                <hr>
+                <div class="card">
+                    <canvas id="horizontalChart" width="400" height="250"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Statistical Facts</h3>
+                <hr>
+                <div class="card">
+                    <canvas id="barWithNormalDist" width="400" height="300"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- the Leaflet JS library -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="static/js/dashboard.js"></script>
+</body>
+
+</html>
