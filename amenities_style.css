@@ -1,0 +1,268 @@
+/* Reset default margins and paddings */
+
+/* Import the font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+/* Dropdown Menu */
+
+.choice{
+    width: 100%;
+}
+
+
+#logo-img{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+#main-div{
+    margin: 0 auto;
+}
+
+
+/* Map Container */
+#map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Ensure the map is behind other elements */
+}
+
+/* Navigation Strip */
+#navigation-strip {
+    position: relative;
+    width: 60px;
+    background-color: rgba(239, 239, 239, 0.96); /* Semi-transparent background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 2; /* Higher than the map */
+    height: 100vh;
+    border-style: solid;
+    border-color: rgb(160, 160, 160);
+    border-width: 0.3px;
+}
+
+#navigation-strip {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* Icon Styling */
+#navigation-strip .icon {
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+#navigation-strip .icon img {
+    width: 25px;
+}
+
+
+
+/* Left Pane */
+#left-pane {
+    position: relative;
+    width: 360px;
+    background-color: rgba(255, 255, 255, 0.75); /* Semi-transparent background */
+    padding: 20px;
+    z-index: 2; /* Higher than the map */
+    height: 100vh;
+    overflow-y: auto;
+    transition: transform 0.4s ease;
+}
+
+#left-pane.hidden {
+    transform: translateX(-120%);
+}
+
+
+
+
+#left-pane {
+    position: fixed;
+    top: 0;
+    left: 60px; /* Width of navigation strip */
+}
+
+#map {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+
+#main-img{
+    width: 200px;
+}
+
+#main-title{
+    color: #385d51e8;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Adjust layout for smaller screens */
+    #navigation-strip {
+        flex-direction: row;
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    #left-pane {
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        position: fixed;
+    }
+
+    #map {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+   
+}
+
+
+#start-button{
+    margin-top: 30px;
+    background-color: #5D78EF;
+    color: white;
+    height: 35px;
+    width: 40%;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline;
+    display: flex;
+    align-items: center; /* Vertically center text */
+    justify-content: center; /* Horizontally center text */
+}
+
+#back-button{
+    margin-top: 30px;
+    background-color: #ffffff;
+    height: 35px;
+    color: #5D78EF;
+    width: 40%;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+    border-color: #5D78EF;
+    border-style: solid;
+    border-radius: 30px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline;
+    display: flex;
+    align-items: center; /* Vertically center text */
+    justify-content: center; /* Horizontally center text */
+}
+
+#back-button:hover{
+    background-color: #e3ebfb;
+}
+
+#start-button:hover{
+    background-color: #5748c9;
+}
+
+#locate_img{
+    width: 30px;
+    opacity: 70%;
+}
+
+
+#amenities-table, tr, td{
+    background-color: #547dca0e;
+    padding: 0px;
+}
+
+td{
+    padding: 5px;
+    border-width: 0.3px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 5px;
+}
+
+table{
+    width: 100%;
+}
+
+
+/* Button Alignments */
+
+#btns-div {
+    display: flex;
+    justify-content: center; /* Horizontally center the buttons */
+    align-items: center;     /* Vertically center the buttons */
+    gap: 10px;               /* Optional: Space between the buttons */
+}
+
+/* Add this CSS to style the loading indicator */
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
